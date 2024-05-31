@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Транскрибатор «Аллегро» - расшифровка аудио и видео с помощью ИИ</title>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="manifest" href="js/manifest.json" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap&_v=20240531112223" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css?_v=20240531112223" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css?_v=20240531112223" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20240531112223" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240531112223">
+
+	<link rel="icon" href="img/favicon.ico">
+
+	<!-- Facebook Pixel Code -->
+	<script>
+		! function(f, b, e, v, n, t, s) {
+			if (f.fbq) return;
+			n = f.fbq = function() {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n;
+			n.push = n;
+			n.loaded = !0;
+			n.version = '2.0';
+			n.queue = [];
+			t = b.createElement(e);
+			t.async = !0;
+			t.src = v;
+			s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '632030395545001');
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" src="https://www.facebook.com/tr?id=632030395545001&ev=PageView
+&noscript=1" />
+	</noscript>
+	<!-- End Facebook Pixel Code -->
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function(m, e, t, r, i, k, a) {
+			m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			for (var j = 0; j < document.scripts.length; j++) {
+				if (document.scripts[j].src === r) {
+					return;
+				}
+			}
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(93953514, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><picture><source srcset="https://mc.yandex.ru/watch/93953514" type="image/webp"><img src="https://mc.yandex.ru/watch/93953514" style="position:absolute; left:-9999px;" alt="" /></picture></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js?_v=20240531112223" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+	<script src="
+	https://cdn.jsdelivr.net/npm/just-validate@4.2.0/dist/just-validate.production.min.js
+	?_v=20240531112223"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/inputmask.min.js?_v=20240531112223" integrity="sha512-czERuOifK1fy7MssE4JJ7d0Av55NPiU2Ymv4R6F0mOGpyPUb9HkP9DcEeE+Qj9In7hWQHGg0CqH1ELgNBJXqGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js?_v=20240531112223"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20240531112223"></script>
+	<script>
+		if (typeof navigator.serviceWorker !== 'undefined') {
+			navigator.serviceWorker.register('js/sw.js')
+		}
+	</script>
+	<link rel="manifest" href="js/manifest.json" />
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__line"></div>
+			<a class="header__logo" href="index.html">
+				<div class="header__square">
+					<img src="img/logo-square.svg" alt="logo" width="51" height="47.6" />
+				</div>
+				<div class="header__logo-title">
+					<div class="header__Ai4G">
+						<img src="img/logo-Ai4G.svg" alt="logo" />
+					</div>
+					<span class="header__logo-suptitle">Фарватер успешного развития</span>
+				</div>
+				<div class="header__triangle">
+					<img src="img/logo-triangle.svg" alt="logo" />
+				</div>
+			</a>
+			<a class="header__logo-mobile" href="index.html">
+				<img src="img/footer-logo.svg" alt="A4iG" width="151" height="62" />
+			</a>
+		</header>
+
+		<main>
+			<section class="top" id="top">
+				<div class="container">
+					<div class="top__inner">
+						<h2 class="top__title">Ai4G —</h2>
+						<div class="top__suptitle">
+							Нейросервис для построения траектории развития. Симбиоз технологий data science
+							и&nbsp;успешного подхода к&nbsp;наставничеству.
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+			<section class="oferta">
+				<div class="oferta__container">
+					<div class="oferta__inner">
+						<h1 class="oferta__title">Правила оплаты и возврата</h1>
+
+						<h2 class="oferta__label">Политика конфиденциальности</h2>
+						<div class="oferta__text">
+							<p>
+								Безопасность платежей обеспечивается с помощью Банка-эквайера, функционирующего на основе современных протоколов и технологий,
+								разработанных
+								платежными системами МИР, Visa International и Mastercard Worldwide (3D-Secure: Verified by VISA, Mastercard SecureCode, MirAccept).
+								Обработка
+								полученных конфиденциальных данных держателя карты производится в процессинговом центре Банка-эквайера, сертифицированного по стандарту
+								PCI
+								DSS.
+							</p>
+						</div>
+						<h2 class="oferta__label">Положение о защищенности передаваемых данных</h2>
+						<div class="oferta__text">
+							<p>
+								Безопасность передаваемой информации обеспечивается с помощью современных протоколов обеспечения безопасности в Интернет. К оплате
+								принимаются
+								банковские карты платежных систем МИР, Visa, MasterCard. Если карта подключена к системе безопасных платежей 3D-Secure (можно уточнить в
+								банке, выдавшем карту), то держатель карты подтверждает каждую операцию по своей карте специальным одноразовым паролем.
+							</p>
+						</div>
+						<h2 class="oferta__label">Пошаговая инструкция оплаты по картам</h2>
+						<div class="oferta__text">
+							<p>
+								Для оплаты услуг с применением банковских карт в виджете или на сайте необходимо выбрать предложенный способ оплаты «Банковская карта».
+								После
+								вы будете перенаправлены на защищенную платежную страницу, где будет необходимо ввести данные вашей пластиковой карты. После оплаты вы
+								получите от сайта уведомление о том, что оплата проведена и/или описание порядка получения товара/услуги.
+							</p>
+						</div>
+						<h2 class="oferta__label">Политика отмены/возвратов платежей по картам</h2>
+						<div class="oferta__text">
+							<p>
+								При ошибочной оплате денежные средства могут быть возвращены. Для выполнения отмены или возврата оплаты необходимо обратиться в
+								техническую
+								поддержку с заявлением:
+							</p>
+						</div>
+						<ul class="oferta__contact">
+							<li>По телефону: <span class="bold">+7 965 753-66-93</span></li>
+							<li>По e-mail: <span class="bold">info@ai4g.ru</span></li>
+						</ul>
+						<div class="oferta__text">
+							<p>
+								При обращении необходимо указать причину возврата и реквизиты операции. В рамках технологии Интернет-эквайринга возврат денежных средств
+								возможен исключительно по реквизитам банковской карты, с которой проводилась оплата.
+							</p>
+						</div>
+						<h2 class="oferta__label">Если в обслуживании отказано</h2>
+						<div class="oferta__text">
+							<p> За разъяснениями об особенностях оплаты по вашей банковской карте в сети Интернет, причинах отказа в оплате вам необходимо в первую
+								очередь обратиться в службу поддержки банка, выпустившего карту.</p>
+						</div>
+
+
+
+					</div>
+				</div>
+			</section>
+
+
+
+		</main>
+		<footer class="footer">
+			<div class="footer__super-wrapper">
+				<div class="footer__wrapper">
+					<div class="container">
+						<h2 class="footer__title">Контактная информация</h2>
+						<div class="footer__items">
+							<a href="mailto:info@ai4g.ru" class="footer__item">
+								<img src="img/email.svg" alt="email" loading="lazy" />
+								<span>info@ai4g.ru</span>
+							</a>
+							<a href="https://t.me/+79852000434" target="_blank" class="footer__item">
+								<img src="img/telegram.svg" alt="telegram" loading="lazy" />
+								<span>+7 985 2000434</span>
+							</a>
+							<a href="https://ai4g.ru/login" target="_blank" class="footer__item">
+								<img src="img/lk.svg" alt="личный кабинет" loading="lazy" />
+								<span>Личный кабинет</span>
+							</a>
+						</div>
+						<div class="footer__logo">
+							<!-- <img
+				 class="footer__logo-desktop"
+				 src="img/footer-logo_.svg"
+				 alt="Ai4G"
+				 loading="lazy"
+			  /> -->
+							<a class="footer__logo2" href="https://fasie.ru">
+								<img class="footer__logo-desktop" src="img/footer-logo2.svg" alt="fond" loading="lazy" />
+								<img class="footer__logo-mobile" src="img/mobile-footer-logo.svg" alt="Ai4G" loading="lazy" />
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- <div class="footer__super-wrapper">
+	  <div class="footer__wrapper"> -->
+				<!-- <div class="container"> -->
+				<!--  <h2 class="footer__title">Контактная информация</h2> -->
+				<!-- <div class="footer__items">
+			  <a href="mailto:info@ai4g.ru" class="footer__item">
+				 <img src="img/email.svg" alt="email" loading="lazy" />
+				 <span>info@ai4g.ru</span> -->
+				<!-- </a>
+			  <a href="https://t.me/+79852000434" target="_blank" class="footer__item">
+				 <img src="img/telegram.svg" alt="telegram" loading="lazy" />
+				 <span>+7 985 2000434</span>
+			  </a>
+			  <a href="https://ai4g.ru/login" target="_blank" class="footer__item">
+				 <img src="img/lk.svg" alt="личный кабинет" loading="lazy" />
+				 <span>Личный кабинет</span>
+			  </a> 
+	</div>-->
+
+				<div class="footer__logo">
+					<!-- <img
+				 class="footer__logo-desktop"
+				 src="img/footer-logo_.svg"
+				 alt="Ai4G"
+				 loading="lazy"
+			  /> -->
+					<!-- <a class="footer__logo2" href="https://fasie.ru"> -->
+					<picture><source srcset="img/logo3h.webp" type="image/webp"><img class="footer2__logo-desktop" src="img/logo3h.png" alt="fond" loading="lazy" /></picture>
+					<picture><source srcset="img/logo3v.webp" type="image/webp"><img class="footer__logo-mobile" src="img/logo3v.png" alt="Ai4G" loading="lazy" /></picture>
+					</a>
+				</div>
+
+
+				<div class="footer__links">
+					<a href="/oferta.html" class="footer__link">
+						Договор оферты
+					</a>
+					<a href="/oplata.html" class="footer__link">
+						Правила оплаты и возврата
+					</a>
+					<a href="/requisites.html" class="footer__link">
+						Реквизиты
+					</a>
+				</div>
+
+		</footer>
+
+
+		<div class="scrollUp">
+			<img cla src="img/arrow-up.svg" alt="scrollUp" />
+		</div>
+
+
+		<div class="modal-request" id="modal-request">
+			<h3 class="modal-request__title">Запись на&nbsp;serf-сессию</h3>
+			<form class="modal-request__form" action="mail.php" enctype="multipart/form-data" method="POST">
+				<div class="modal-request__item">
+					<input class="modal-request__name" data-validate-field="name" name="Имя" type="text" placeholder="Представьтесь, пожалуйста" />
+				</div>
+				<div class="modal-request__item">
+					<input class="modal-request__phone" data-validate-field="tel" name="Телефон" type="tel" placeholder="Телефон" />
+				</div>
+				<div class="modal-request__item">
+					<input class="modal-request__phone" data-validate-field="email" name="email" type="email" placeholder="Электронная почта" />
+				</div>
+				<div class="modal-request__choice">
+					<div class="modal-request__left">Предпочтительный способ связи:</div>
+					<div class="modal-request__right">
+						<label class="modal-request__label"><input class="modal-request__radio" type="radio" name="Предпочтительный способ связи:" value="Телефон" checked /><span>Телефон</span></label>
+						<label class="modal-request__label"><input class="modal-request__radio" type="radio" name="Предпочтительный способ связи:" value="WhatsApp" /><span>WhatsApp</span></label>
+						<label class="modal-request__label">
+							<input class="modal-request__radio" type="radio" name="Предпочтительный способ связи:" value="Telegram" /><span>Telegram</span></label>
+					</div>
+				</div>
+				<button class="modal-request__btn" type="submit">Записаться</button>
+
+				<script>
+					let params = new URLSearchParams(window.location.search);
+					let bc = params.get('bc'); //код партнера, который был передан в url (?bc=12345)
+					document.writeln("<input type='hidden' name='bc' value='" + bc + "'>");
+					let utm_campaign = params.get('utm_campaign');
+					document.writeln("<input type='hidden' name='utm_campaign' value='" + utm_campaign + "'>");
+					let utm_content = params.get('utm_content');
+					document.writeln("<input type='hidden' name='utm_content' value='" + utm_content + "'>");
+					let utm_medium = params.get('utm_medium');
+					document.writeln("<input type='hidden' name='utm_medium' value='" + utm_medium + "'>");
+					let utm_source = params.get('utm_source');
+					document.writeln("<input type='hidden' name='utm_source' value='" + utm_source + "'>");
+					let utm_term = params.get('utm_term');
+					document.writeln("<input type='hidden' name='utm_term' value='" + utm_term + "'>");
+				</script>
+
+
+			</form>
+			<div class="modal-request__agree">
+				Отправляя форму, вы&nbsp;соглашаетесь с&nbsp;обработкой персональных данных и&nbsp;
+				<a href="https://docs.google.com/file/d/1pnHJaJK5kQtxE3m8iUJ-3nji23o9XnpV/edit?filetype=msword">
+					<span>условиями договора-оферты</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal-thanks" id="modal-thanks">
+			<div class="modal-thanks__logo">
+				<img src="img/modal-thanks-logo.svg" alt="Ai4G" loading="lazy" />
+			</div>
+			<h3 class="modal-thanks__title">Вы&nbsp;успешно записались на&nbsp;serf-сессию.</h3>
+			<div class="modal-thanks__text">
+				В&nbsp;ближайшее время мы&nbsp;свяжемся с&nbsp;вами указанным способом
+			</div>
+		</div>
+
+		<div class="modal-oplata" id="modal-oplata">
+			<h3 class="modal-oplata__title">Транскрибация видео-аудио контента</h3>
+			<form class="modal-oplata__form" action="oplata.php" enctype="multipart/form-data" method="POST">
+				<div class="modal-oplata__item">
+					<input class="modal-oplata__name" data-validate-field="name" name="Имя" type="text" placeholder="Представьтесь, пожалуйста" />
+				</div>
+
+				<div class="modal-oplata__item">
+					<input class="modal-oplata__email" data-validate-field="email" name="email" type="email" placeholder="Электронная почта для отправки файла" />
+				</div>
+
+				<button class="modal-oplata__btn" type="submit">к оплате</button>
+
+			</form>
+			<div class="modal-oplata__agree">
+				Отправляя форму, вы&nbsp;соглашаетесь с&nbsp;обработкой персональных данных и&nbsp;
+				<a href="https://docs.google.com/file/d/1pnHJaJK5kQtxE3m8iUJ-3nji23o9XnpV/edit?filetype=msword">
+					<span>условиями договора-оферты</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="modal-pay" id="modal-pay">
+			<div class="modal-pay__title modal-pay__title_green">сумма к оплате: <br><span>200 ₽</span></div>
+			<div class="modal-pay__title">выберите предпочтительный способ оплаты</div>
+			<form class="modal-pay__form" action="pay.php" enctype="multipart/form-data" method="POST">
+				<input type="hidden" name="Имя" class="hidden-name">
+				<input type="hidden" name="email" class="hidden-email">
+				<div class="modal-pay__block">
+					<div class="modal-pay__item">
+						<label class="modal-pay__label">
+							<input class="modal-request__radio" type="radio" name="payment_method" value="card" /> <span>Банковская карта</span>
+						</label>
+						<picture><source srcset="img/transcribator/card.webp" type="image/webp"><img src="img/transcribator/card.jpg" alt=""></picture>
+					</div>
+					<div class="modal-pay__item">
+						<label class="modal-pay__label">
+							<input class="modal-request__radio" type="radio" name="payment_method" value="umoney" /> <span>ЮMoney</span>
+						</label>
+						<picture><source srcset="img/transcribator/umoney.webp" type="image/webp"><img src="img/transcribator/umoney.jpg" alt=""></picture>
+					</div>
+					<div class="modal-pay__item">
+						<label class="modal-pay__label">
+							<input class="modal-request__radio" type="radio" name="payment_method" value="sbp" /> <span>СБП</span>
+						</label>
+						<picture><source srcset="img/transcribator/sbp.webp" type="image/webp"><img src="img/transcribator/sbp.jpg" alt=""></picture>
+					</div>
+				</div>
+				<button class="modal-pay__btn" type="submit">оплатить</button>
+			</form>
+			<div class="modal-pay__agree">
+				Отправляя форму, вы&nbsp;соглашаетесь с&nbsp;обработкой персональных данных и&nbsp;
+				<a href="https://docs.google.com/file/d/1pnHJaJK5kQtxE3m8iUJ-3nji23o9XnpV/edit?filetype=msword">
+					<span>условиями договора-оферты</span>
+				</a>
+			</div>
+		</div>
+
+		<div class="file-sent" id="file-sent">
+			<div class="file-sent__content">
+				<h3 class="file-sent__title file-sent__title_white">оплата успешно <br>проведена</h3>
+				<div class="file-sent__title">
+					файл отправлен <br>на почту!
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="modal-swiper" id="modal-swiper-1">
+			<div class="modal-swiper__name">Татьяна Андреева</div>
+			<div class="modal-swiper__text">
+				Я&nbsp;шла на&nbsp;поддерживающую сессию с&nbsp;твёрдым пониманием, что сессия необходима,
+				но&nbsp;не&nbsp;осознавала всей полезности, ввиду того, что в&nbsp;мыслях и&nbsp;чувствах
+				была неопределённость. Это вторая сессия с&nbsp;Еленой, и&nbsp;у&nbsp;меня сформировалось
+				мнение, что: 1. Елена очень точно понимает невысказанное, а&nbsp;также суть
+				&laquo;коряво&raquo; высказанного, когда в&nbsp;голове и&nbsp;на&nbsp;словах присутствует
+				туманность, нечеткость, подмечает детали, которые порой выглядят для говорящего как нечто
+				проходное, но&nbsp;на&nbsp;самом деле несут в&nbsp;себе важное значение; и&nbsp;умело
+				&laquo;упаковывает&raquo; всё это ...
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240531112223"></script>
+</body>
+
+</html>
