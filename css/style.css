@@ -1813,22 +1813,22 @@ body {
   height: 200px;
   margin: 0 -40px;
   border-radius: 19px;
-  background: url(img/transcribator/border.svg) 0 0/100% 200px no-repeat;
+  background: url(../img/transcribator/border.svg) 0 0/100% 200px no-repeat;
   transition: all 0.3s ease;
 }
 .trancrib__form:hover {
-  background: url(img/transcribator/border.svg) 0 0/100% 200px no-repeat, #fff;
+  background: url(../img/transcribator/border.svg) 0 0/100% 200px no-repeat, #fff;
 }
 @media (max-width: 980px) {
   .trancrib__form {
-    background: url(img/transcribator/border.svg) 0 0/100% 100% no-repeat;
+    background: url(../img/transcribator/border.svg) 0 0/100% 100% no-repeat;
     margin: 0;
   }
 }
 .trancrib__img {
   height: 50px;
   width: 56px;
-  background: url(img/transcribator/download.png) 0 0/56px 50px no-repeat;
+  background: url(../img/transcribator/download.png) 0 0/56px 50px no-repeat;
 }
 .trancrib__text {
   position: relative;
@@ -1925,7 +1925,7 @@ body {
 }
 .file-is-loading .trancrib__img {
   height: 70px;
-  background: url(img/transcribator/file-is-loading.png) 0 0/56px 70px no-repeat;
+  background: url(../img/transcribator/file-is-loading.png) 0 0/56px 70px no-repeat;
 }
 .file-is-loading .trancrib__link {
   display: none;
@@ -1968,7 +1968,7 @@ body {
 }
 .loading-is-complete .trancrib__img {
   height: 70px;
-  background: url(img/transcribator/loading-is-complete.png) 0 0/56px 70px no-repeat;
+  background: url(../img/transcribator/loading-is-complete.png) 0 0/56px 70px no-repeat;
 }
 .loading-is-complete .trancrib__link {
   display: none;
@@ -1996,7 +1996,7 @@ body {
 .decoding .trancrib__img {
   height: 64px;
   width: 56px;
-  background: url(img/transcribator/decoding.png) 0 0/56px 64px no-repeat;
+  background: url(../img/transcribator/decoding.png) 0 0/56px 64px no-repeat;
 }
 .decoding .trancrib__link {
   display: none;
@@ -2023,7 +2023,7 @@ body {
 
 .file-is-ready .trancrib__img {
   height: 62px;
-  background: url(img/transcribator/file-is-ready.png) 0 0/56px 62px no-repeat;
+  background: url(../img/transcribator/file-is-ready.png) 0 0/56px 62px no-repeat;
 }
 .file-is-ready .trancrib__text::after {
   content: "Файл готов к отправке";
